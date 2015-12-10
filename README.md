@@ -1,2 +1,2 @@
-# curso-angularjs
-Códigos fontes do curso de Angular JS
+﻿#Curso AngularJS
+	Códigos fontes do curso de Angular JS
