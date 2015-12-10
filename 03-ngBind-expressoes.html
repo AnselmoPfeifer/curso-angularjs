@@ -1,0 +1,26 @@
+<html ng-app ng-init="valor1 = 5; valor2 = 10; valor3 = valor1 + valor2;
+pessoa ={nome : 'Anselmo', sobrenome : 'Pfeifer'}">
+<head>
+	<title>Curso AngularJS - Aula 03</title>
+	<meta charset="utf-8">	
+</head>
+<body>
+	<h1 ng-bind="valor3"></h1>
+	<h1 ng-bind="valor1 + valor2"></h1>
+	<h1 ng-bind="valor1 - valor2"></h1>
+	<h1 ng-bind="valor1 * valor2"></h1>
+	<h1 ng-bind="valor1 / valor2"></h1>
+
+	<!--Usando as as {{assim}} as chaves ({{}}) acabam apararecendo para o usuario no momento de recarregar a pagina-->
+
+	<h1>{{valor3}}</h1>
+
+	<h1 ng-bind="pessoa.nome + ' ' + pessoa.sobrenome"></h1>
+	<input type="text" ng-model="pessoa.nome + ' ' +pessoa.sobrenome"/>
+	
+	<input type="number" ng-model="valor1"/>
+	<input type="number" ng-model="valor2"/>
+
+	<script src="js/angular.min.js"></script>
+</body>
+</html>

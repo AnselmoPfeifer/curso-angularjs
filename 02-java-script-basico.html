@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title>Java Script Basico</title>
+	<meta charset="utf-8">
+
+	<script>
+		var total = 30 + 18;
+		console.log(total);
+		var pessoa = {
+			nome : "Anselmo",
+			sobrenome : "Pfeifer",
+			idade : 35,
+			status : true
+		}
+		console.log(pessoa);
+
+		var pessoas = [];
+			pessoas.push(pessoa);
+			pessoas.push(pessoa);
+
+		console.log(pessoas);
+
+		if(pessoa.status == true){
+			console.log("O usuario: " + pessoa.nome + " está ativo!");
+		}else{
+			console.log("Usuario " + pessoa.nome + " esta inativo!")
+		}
+
+		for( var i = 1; i<5; i++){
+			document.write("<p>" + i + "</p>")
+		}
+
+		function loadWindow(){
+			document.getElementById("campo").value = total;
+		}
+		
+	</script>
+</head>
+<body onload="loadWindow()">
+	<input value="" id="campo"/>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Hello 3</title>
+    <script 
+    	src="../js/angular.min.js">
+	</script>
+</head>
+<body ng-app>
+    <form>
+        <input type="text" ng-model="nome" placeholder="Coloque aqui seu nome!">
+        <hr>
+         <h1>Hello {{nome}}</span></h1>
+         <hr>
+        <h1>Hello <span ng-bind="nome"></span></h1>
+    </form>
+
+</body>
+</html>
