@@ -1,10 +1,25 @@
-<html ng-app>
+<html>
 <head>
 	<title>Curso AngularJS - Aula 04</title>
-	<meta charset="utf-8">	
+	<meta charset="utf-8">
+		
 </head>
 <body>
+	<div class="container">
+		<div id="menu">Menu</div>
+		<div id="topo">Topo</div>
+		<div id="conteudo">
+			<div id="aplicacao" ng-app="appSaudacao"> <h1>Aplicação de Saudação</h1>
+				{{'Anselmo ' | Ola}}
+			</div>
+			<div id="mensagen" ng-app="appMensagem">Aplicação de Mensagens</div>
+
+
+		</div>
+		<div id="rodape">Rodape</div>
+	</div>
 	
 	<script src="js/angular.min.js"></script>
+	<script src="js/appSaudacao.module.js"></script>
 </body>
 </html>
