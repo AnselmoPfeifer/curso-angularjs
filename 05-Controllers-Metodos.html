@@ -1,0 +1,21 @@
+<html ng-app="app">
+<head>
+	<title>Curso AngularJS - Aula 05</title>
+	<meta charset="utf-8">
+		
+</head>
+<body>
+	<div class="container" ng-controller="05appController">
+		{{ tipo + ' de ' + curso}}
+		<p>
+			<button type="button" ng-click="olaMundo('Anselmo')">Click Aqui</button>
+		</p>
+	</div>
+		
+	<script src="js/angular.min.js"></script>
+	<!--Modulos -->
+	<script src="js/app.module.js"></script>
+	<!-- Controllers -->
+	<script src="js/05appController.js"></script>
+</body>
+</html>
