@@ -1,0 +1,31 @@
+<html ng-app="app">
+<head>
+	<title>Curso AngularJS - Aula 06</title>
+	<meta charset="utf-8">
+		
+</head>
+<body>
+	<div class="container" ng-controller="07Controller">
+		<ul>
+			<li ng-repeat="nome in nomes">{{nome}}</li>
+		</ul>
+		<hr>
+		Add Nome: <input type="text" id="nomepesssoa"/><br>
+		Add Idade: <input type="text" id="idadepessoa"/><br>
+		<button type="button" ng-click="adicionarPessoa()">Cadastrar</button>
+		<hr>
+		<ul>
+			<li ng-repeat="pessoa in pessoas">
+				{{pessoa.nome}} - {{pessoa.idade}}
+			</li>
+
+		</ul>
+	</div>
+		
+	<script src="js/angular.min.js"></script>
+	<!--Modulos -->
+	<script src="js/app.module.js"></script>
+	<!-- Controllers -->
+	<script src="js/06Controller.js"></script>
+</body>
+</html>
