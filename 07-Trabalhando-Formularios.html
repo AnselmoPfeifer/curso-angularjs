@@ -2,16 +2,40 @@
 <head>
 	<title>Curso AngularJS - Aula 07</title>
 	<meta charset="utf-8">
+        <style>
+            input.ng-invalid.ng-touched{
+                background: #FF0000;
+            }
+            input.ng-valid.ng-touched{
+                background: #CEF6F5;
+            }
+            .alerta{
+                padding: 2px;
+                width: 300px;
+                text-align: center;
+                color: #FF0000;
+            }
+        </style>
 		
 </head>
-<body>
-    <div class="container" ng-controller="07Controller">
-        <form novalidate>
+<body ng-controller="07Controller">
+    <div class="container" >
+        <form name="form" novalidate ng-submit="salvarPessoa(pessoa)">
             <p>
-                Nome: <input type="text" ng-model="pessoa.nome" required/>
+                Nome: <input name="nome" type="text" ng-model="pessoa.nome" required/>
+            <div class="alerta" ng-show="form.$submitted || form.nome.$touched">
+                <div ng-show="form.nome.$error.required">
+                    O campo nome deve ser preenchido
+                </div>
+            </div>
             </p>
             <p>
-                Email: <input type="text" ng-model="pessoa.email" required/>
+                Email: <input name="email" type="email" ng-model="pessoa.email" required/>
+            <div class="alerta" ng-show="form.$submitted || form.email.$touched">
+                <div ng-show="form.email.$error.required">
+                    O campo E-mail deve ser preenchido
+                </div>
+            </div>
             </p>
             <p>
                 Sexo: 
@@ -22,18 +46,19 @@
                 Estados: 
                 <select ng-model="pessoa.estado">
                     <option ng-repeat="estado in estados" 
-                            value="{{ estado }}">{{ estado }}>
-                    </option>
+                            value="{{ estado }}" ng-selected="estado==pessoa.estado">{{estado}}</option>
+                            
+  
                 </select>
             </p>
             <p>
-                <input type="submit" value="Salvar"/>
-                <input type="reset" value="Limpar"/>
+                <input type="submit" value="Salvar" ng-disabled="form.$invalid"/>
             </p>
 
             <pre>
-                {{ pessoa | json }}
+                <h3>{{ pessoa | json }}</h3>
             </pre>
+            <pre>{{pessoas | json}}</pre>
         </form>
     </div>
 		

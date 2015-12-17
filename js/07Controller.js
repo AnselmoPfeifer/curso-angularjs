@@ -1,9 +1,16 @@
 app.controller("07Controller", function($scope){
-    $scope.estados ['RS', 'RJ', 'SC', 'SP'];
+    
+    $scope.estados = ['RS', 'RJ', 'SC', 'SP','RR'];
     
     $scope.pessoa = novaPessoa();
+    $scope.pessoas = [];
     
-    console.log($scope.pessoa);
+    $scope.salvarPessoa = function(pessoa){
+        $scope.pessoas.push(pessoa);
+        $scope.pessoa = novaPessoa();
+        $scope.form.$setUntouched();
+        $scope.form.$setPristine();
+    }
 });
 
 function novaPessoa(){
