@@ -3,14 +3,28 @@
 	<title>Curso AngularJS - Aula 08</title>
 	<meta charset="utf-8">	
 </head>
-<body ng-controller="08Controller">
-    <div class="container" >
-        
+<body>
+    <div class="container"  ng-controller="08Controller">
+        Contexto do Controller 1
+		<p>Lista de Pessoas<br>
+		{{ pessoa.nome }} / {{ pessoa.idade}}
+		</p>
+
     </div>
+
+	<div ng-controller="08Controller2">
+		Contexto do Controller 2
+		<p>Lista de Pessoas<br>
+			{{ outrapessoa.nome }} / {{ outrapessoa.idade}}
+		</p>
+	</div>
 		
 	<script src="js/angular.min.js"></script>
 	<!--Modulos -->
 	<script src="js/app.module.js"></script>
+	<!--Servicos -->
+	<script src="js/08Service.js"></script>
+	<script src="js/08PessoaFactory.js"></script>
 	<!-- Controllers -->
 	<script src="js/08Controller.js"></script>
 </body>
