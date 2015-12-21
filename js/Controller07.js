@@ -1,4 +1,4 @@
-app.controller("07Controller", function($scope){
+app.controller("Controller07", function($scope){
     
     $scope.estados = ['RS', 'RJ', 'SC', 'SP','RR'];
     

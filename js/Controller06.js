@@ -1,4 +1,4 @@
-app.controller("07Controller", function($scope){
+app.controller("Controller06", function($scope){
 	$scope.nomes = ['Anselmo', 'Jooa', 'Pedro','Maria'];
 
 	$scope.pessoas = [];

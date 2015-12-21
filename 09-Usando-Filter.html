@@ -1,0 +1,23 @@
+<html ng-app="app">
+<head>
+    <title>Curso AngularJS - Aula 09</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<div class="container"  ng-controller="Controller09">
+
+    <p>{{ 'anselmo pfeifer' | uppercase }}</p>
+    <p>{{ (pessoa | json) }}</p>
+    <p>{{ 'Anselmo Pfeifer' | retornaSaudacao}}</p>
+
+</div>
+
+
+<script src="js/angular.min.js"></script>
+<!--Modulos -->
+<script src="js/app.module.js"></script>
+<!-- Controllers -->
+<script src="js/Controller09.js"></script>
+<script src="js/Filter10.js"></script>
+</body>
+</html>

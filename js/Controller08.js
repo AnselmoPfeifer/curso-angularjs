@@ -1,4 +1,4 @@
-app.controller('08Controller', ['$scope', 'operacoes',
+app.controller('Controller08', ['$scope', 'operacoes',
     'Pessoa', function($scope, operacoes, Pessoa){
     $scope.pessoa = new Pessoa();
 
@@ -7,7 +7,7 @@ app.controller('08Controller', ['$scope', 'operacoes',
     console.log(operacoes.somar(10, 10));
 }]);
 
-app.controller('08Controller2', ['$scope', 'operacoes', 'Pessoa',
+app.controller('Controller082', ['$scope', 'operacoes', 'Pessoa',
     function($scope, operacoes, Pessoa){
     console.log("Entrou no controller 08-2");
     console.log("Subtrair de 5 de 10");

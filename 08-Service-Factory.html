@@ -4,7 +4,7 @@
 	<meta charset="utf-8">	
 </head>
 <body>
-    <div class="container"  ng-controller="08Controller">
+    <div class="container"  ng-controller="Controller08">
         Contexto do Controller 1
 		<p>Lista de Pessoas<br>
 		{{ pessoa.nome }} / {{ pessoa.idade}}
@@ -12,7 +12,7 @@
 
     </div>
 
-	<div ng-controller="08Controller2">
+	<div ng-controller="Controller082">
 		Contexto do Controller 2
 		<p>Lista de Pessoas<br>
 			{{ outrapessoa.nome }} / {{ outrapessoa.idade}}
@@ -23,9 +23,9 @@
 	<!--Modulos -->
 	<script src="js/app.module.js"></script>
 	<!--Servicos -->
-	<script src="js/08Service.js"></script>
-	<script src="js/08PessoaFactory.js"></script>
+	<script src="js/Service08.js"></script>
+	<script src="js/PessoaFactory08.js"></script>
 	<!-- Controllers -->
-	<script src="js/08Controller.js"></script>
+	<script src="js/Controller08.js"></script>
 </body>
 </html>

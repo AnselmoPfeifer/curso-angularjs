@@ -1,4 +1,4 @@
-app.controller('05appController', function ($scope) {
+app.controller('Controller05', function ($scope) {
 	$scope.tipo = "Curso On Line";
 	$scope.curso = "Curso AngularJS";
 

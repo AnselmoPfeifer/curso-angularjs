@@ -1,5 +1,9 @@
 <html ng-app ng-init="valor1 = 5; valor2 = 10; valor3 = valor1 + valor2;
-pessoa ={nome : 'Anselmo', sobrenome : 'Pfeifer'}">
+pessoa ={
+	nome : 'Anselmo',
+	sobrenome : 'Pfeifer'
+	}
+	">
 <head>
 	<title>Curso AngularJS - Aula 03</title>
 	<meta charset="utf-8">	
@@ -13,13 +17,14 @@ pessoa ={nome : 'Anselmo', sobrenome : 'Pfeifer'}">
 
 	<!--Usando as as {{assim}} as chaves ({{}}) acabam apararecendo para o usuario no momento de recarregar a pagina-->
 
-	<h1>{{valor3}}</h1>
+	Impressão de Valores da Variavei valor 3: <h1>{{valor3}}</h1>
+	Valor 1: <input type="number" ng-model="valor1"/><br>
+	Valor 2: <input type="number" ng-model="valor2"/>
+	<p>
+		Impressão da Variavel Pessoa.nome: <h4 ng-bind="pessoa.nome + ' ' + pessoa.sobrenome"></h4>
 
-	<h1 ng-bind="pessoa.nome + ' ' + pessoa.sobrenome"></h1>
-	<input type="text" ng-model="pessoa.nome + ' ' +pessoa.sobrenome"/>
-	
-	<input type="number" ng-model="valor1"/>
-	<input type="number" ng-model="valor2"/>
+	Nome: <input type="text" ng-model='pessoa.nome'/><br>
+	</p>
 
 	<script src="js/angular.min.js"></script>
 </body>
